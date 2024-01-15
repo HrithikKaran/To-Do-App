@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'extended_beauty.css') }}"
+/>
+<link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+{% endblock %} {% block content %}
+<h4>
+  <br>Welcome, To Do App
+</h4>
+<div><hr>
+    <p><br>This To-Do App has been buit using Flask. It performs the basic CRUD operations. User can login to their account and add a new to-do. They can also edit and delete their to-do as they want. </p>
+</div>
+{% endblock %}

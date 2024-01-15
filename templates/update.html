@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'extended_beauty.css') }}"
+/>
+<link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+{% endblock %} {% block content %}
+
+    <div class="container">
+        <div class="contant-section-1">
+            <h2>Add Your Todo</h2>
+            <hr>
+            <form method="POST" action="{{ url_for('update', id=todo.id) }}" class="form" name="form">
+                <!-- input for div start -->
+                <div class="input-div">
+                    <label for="title">Enter Your Todo Title</label>
+                    <input 
+                    type="text"
+                    name="title"
+                    id="title"
+                    value="{{todo.title}}"
+                    class="input-text"
+                    placeholder="Enter a title">
+                </div>
+                <!-- input form div end -->
+                <div class="input-div">
+                    <label for="description">Describe Your Todo here</label>
+                    <input 
+                    type="text"
+                    name="description"
+                    value="{{todo.desc}}"
+                    id="description"
+                    placeholder="Enter your description">
+                </div>
+                <button class="add-btn" type="submit">Update</button>
+                <!-- input from div end -->
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

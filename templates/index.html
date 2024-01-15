@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+
+  <h1>
+    Hello!
+  </h1>
+  <center>
+    <img
+      src="{{ url_for('static', filename= 'images/todo.png') }}"
+      alt="push-ups boi"
+      height="200px"
+    />
+  </center>
+  <p>
+    Welcome to your To-Do App! <br />Your go-to companion for staying organized and on top of your tasks! Say goodbye to chaos and hello to productivity. Let's turn your to-dos into ta-das! <br>🚀 #GetThingsDone"
+  </p>
+{% endblock %}
